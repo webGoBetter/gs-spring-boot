@@ -8,7 +8,7 @@ projects: [spring-boot]
 :icons: font
 :source-highlighter: prettify
 :project_id: gs-spring-boot
-本指南提供了一个示例，演示了 {spring-boot}[Spring Boot] 如何帮助你加速和促进应用开发。当您阅读更多的Spring入门指南时，您会看到更多的Spring Boot用例。它的目的是让你快速尝试Spring Boot。如果你想创建自己的Spring Boot为基础的项目，访问 http://start.knos.top/[Spring 初始化程序]，方括号中填写您的项目的详细信息，选择你的选项，你可以下载Maven构建文件，或将项目打包为一个zip文件。
+本指南提供了一个示例，演示了 {spring-boot}[Spring Boot] 如何帮助你加速和促进应用开发。当您阅读更多的Spring入门指南时，您会看到更多的Spring Boot用例。它的目的是让你快速尝试Spring Boot。如果你想创建自己的Spring Boot为基础的项目，访问 http://start.knos.top/[Spring 初始化程序]，填写您的项目的详细信息，选择你的选项，你可以下载Maven构建文件，或将项目打包为一个zip文件。
 
 == 你将构建什么
 您将使用Spring Boot构建一个简单的Web应用程序，并向它添加一些有用的服务。
