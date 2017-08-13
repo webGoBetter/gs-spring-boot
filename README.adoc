@@ -13,24 +13,24 @@ It is meant to give you a quick taste of Spring Boot. If you want to create your
 http://start.spring.io/[Spring Initializr], fill in your project details, pick your options, and you can download either
 a Maven build file, or a bundled up project as a zip file.
 
-== What you'll build
+== 你将构建什么
 You'll build a simple web application with Spring Boot and add some useful services to it.
 
-== What you'll need
+== 你需要什么
 
 :java_version: 1.8
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/prereq_editor_jdk_buildtools.adoc[]
+include::https://raw.githubusercontent.com/webGoBetter/getting-started-macros/master/prereq_editor_jdk_buildtools.adoc[]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/how_to_complete_this_guide.adoc[]
+include::https://raw.githubusercontent.com/webGoBetter/getting-started-macros/master/how_to_complete_this_guide.adoc[]
 
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/hide-show-gradle.adoc[]
+include::https://raw.githubusercontent.com/webGoBetter/getting-started-macros/master/hide-show-gradle.adoc[]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/hide-show-maven.adoc[]
+include::https://raw.githubusercontent.com/webGoBetter/getting-started-macros/master/hide-show-maven.adoc[]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/hide-show-sts.adoc[]
+include::https://raw.githubusercontent.com/webGoBetter/getting-started-macros/master/hide-show-sts.adoc[]
 
-== Learn what you can do with Spring Boot
+== 了解用Spring Boot你可以做什么
 
 Spring Boot offers a fast way to build applications. It looks at your classpath and at beans you have configured, makes reasonable assumptions about what you're missing, and adds it. With Spring Boot you can focus more on business features and less on infrastructure.
 
@@ -44,7 +44,7 @@ These are just a few examples of the automatic configuration Spring Boot provide
 
 NOTE: Spring Boot doesn't generate code or make edits to your files. Instead, when you start up your application, Spring Boot dynamically wires up beans and settings and applies them to your application context.
 
-== Create a simple web application
+== 创建一个简单的Web应用程序
 Now you can create a web controller for a simple web application.
 
 `src/main/java/hello/HelloController.java`
@@ -55,7 +55,7 @@ include::initial/src/main/java/hello/HelloController.java[]
 
 The class is flagged as a `@RestController`, meaning it's ready for use by Spring MVC to handle web requests. `@RequestMapping` maps `/` to the `index()` method. When invoked from a browser or using curl on the command line, the method returns pure text. That's because `@RestController` combines `@Controller` and `@ResponseBody`, two annotations that results in web requests returning data rather than a view.
 
-== Create an Application class
+== 创建应用程序类
 Here you create an `Application` class with the components:
 
 `src/main/java/hello/Application.java`
@@ -64,11 +64,11 @@ Here you create an `Application` class with the components:
 include::complete/src/main/java/hello/Application.java[]
 ----
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/spring-boot-application.adoc[]
+include::https://raw.githubusercontent.com/webGoBetter/getting-started-macros/master/spring-boot-application.adoc[]
 
 There is also a `CommandLineRunner` method marked as a `@Bean` and this runs on start up. It retrieves all the beans that were created either by your app or were automatically added thanks to Spring Boot. It sorts them and prints them out.
 
-== Run the application
+== 运行应用程序
 To run the application, execute:
 
 [subs="attributes"]
@@ -132,7 +132,7 @@ $ curl localhost:8080
 Greetings from Spring Boot!
 ....
 
-== Add Unit Tests
+== 添加单元测试
 
 You will want to add a test for the endpoint you added, and Spring Test already provides some machinery for that, and it's easy to include in your project.
 
@@ -245,10 +245,10 @@ Because we didn't enable it, the request is blocked by the virtue of not existin
 
 For more details about each of these REST points and how you can tune their settings with an `application.properties` file, you can read detailed http://docs.spring.io/spring-boot/docs/{spring_boot_version}/reference/htmlsingle/#production-ready-endpoints[docs about the endpoints].
 
-== View Spring Boot's starters
+== 查看Spring Boot starter程序
 You have seen some of http://docs.spring.io/spring-boot/docs/{spring_boot_version}/reference/htmlsingle/#using-boot-starter[Spring Boot's "starters"]. You can see them all https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters[here in source code].
 
-== JAR support and Groovy support
+== jar支持和Groovy支持
 The last example showed how Spring Boot makes it easy to wire beans you may not be aware that you need. And it showed how to turn on convenient management services.
 
 But Spring Boot does yet more. It supports not only traditional WAR file deployments, but also makes it easy to put together executable JARs thanks to Spring Boot's loader module. The various guides demonstrate this dual support through the `spring-boot-gradle-plugin` and `spring-boot-maven-plugin`.
@@ -290,16 +290,16 @@ Hello World!
 
 Spring Boot does this by dynamically adding key annotations to your code and using http://groovy.codehaus.org/Grape[Groovy Grape] to pull down libraries needed to make the app run.
 
-== Summary
+== 总结
 Congratulations! You built a simple web application with Spring Boot and learned how it can ramp up your development pace. You also turned on some handy production services.
 This is only a small sampling of what Spring Boot can do. Checkout http://docs.spring.io/spring-boot/docs/{spring_boot_version}/reference/htmlsingle[Spring Boot's online docs]
 if you want to dig deeper.
 
-== See Also
+== 参见
 
 The following guides may also be helpful:
 
 * https://spring.io/guides/gs/securing-web/[Securing a Web Application]
 * https://spring.io/guides/gs/serving-web-content/[Serving Web Content with Spring MVC]
 
-include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/footer.adoc[]
+include::https://raw.githubusercontent.com/webGoBetter/getting-started-macros/master/footer.adoc[]
