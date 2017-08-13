@@ -53,7 +53,7 @@ include::initial/src/main/java/hello/HelloController.java[]
 这个类被标记为一个 `@RestController` ，意思是准备使用Spring MVC处理Web请求。 `@RequestMapping` 映射 `/` 到 `index()` 方法。当从浏览器调用或使用命令行上的 curl 时，该方法返回纯文本。这是因为 `@RestController` 结合 `@Controller` 和 `@ResponseBody` ，这两个注释会是在Web请求返回的结果是数据而不是一个视图。
 
 == 创建应用程序类
-Here you create an `Application` class with the components:
+在这里，您用组件创建一个应用程序类:
 
 `src/main/java/hello/Application.java`
 [source,java]
@@ -63,24 +63,24 @@ include::complete/src/main/java/hello/Application.java[]
 
 include::https://raw.githubusercontent.com/webGoBetter/getting-started-macros/master/spring-boot-application.adoc[]
 
-There is also a `CommandLineRunner` method marked as a `@Bean` and this runs on start up. It retrieves all the beans that were created either by your app or were automatically added thanks to Spring Boot. It sorts them and prints them out.
+还有一个 `CommandLineRunner` 方法标记为 `@Bean` ，这会在应用启动时运行。它检索你的应用程序创建的所有bean，或者Spring Boot自动添加的。它会将它们排序后打印出来。
 
 == 运行应用程序
-To run the application, execute:
+运行应用程序，执行:
 
 [subs="attributes"]
 ----
 ./gradlew build && java -jar build/libs/{project_id}-0.1.0.jar
 ----
 
-If you are using Maven, execute:
+如果你使用 Maven, 执行:
 
 [subs="attributes"]
 ----
 mvn package && java -jar target/{project_id}-0.1.0.jar
 ----
 
-You should see some output like this:
+你应该看到一些这样的输出:
 
 ....
 Let's inspect the beans provided by Spring Boot:
@@ -120,9 +120,9 @@ tomcatEmbeddedServletContainerFactory
 viewControllerHandlerMapping
 ....
 
-You can clearly see **org.springframework.boot.autoconfigure** beans. There is also a `tomcatEmbeddedServletContainerFactory`.
+你可以清楚地看到 **org.springframework.boot.autoconfigure** 的bean. 还有一个 `tomcatEmbeddedServletContainerFactory`.
 
-Check out the service.
+查看服务.
 
 ....
 $ curl localhost:8080
@@ -131,23 +131,23 @@ Greetings from Spring Boot!
 
 == 添加单元测试
 
-You will want to add a test for the endpoint you added, and Spring Test already provides some machinery for that, and it's easy to include in your project.
+您需要为您添加的端点添加一个测试，Spring测试已经提供了一些机制，并且很容易包含在您的项目中。
 
-Add this to your build file's list of dependencies:
+将此添加到构建文件的依赖列表中：
 
 [source,groovy]
 ----
 include::complete/build.gradle[tag=tests]
 ----
 
-If you are using Maven, add this to your list of dependencies:
+如果你使用Maven, 把这个添加到你的依赖列表中:
 
 [source,xml]
 ----
 include::complete/pom.xml[tag=tests]
 ----
 
-Now write a simple unit test that mocks the servlet request and response through your endpoint:
+现在写一个简单的单元测试，mock 通过你的终点的servlet请求和响应：
 
 `src/test/java/hello/HelloControllerTest.java`
 [source,java]
