@@ -8,13 +8,10 @@ projects: [spring-boot]
 :icons: font
 :source-highlighter: prettify
 :project_id: gs-spring-boot
-This guide provides a sampling of how {spring-boot}[Spring Boot] helps you accelerate and facilitate application development. As you read more Spring Getting Started guides, you will see more use cases for Spring Boot.
-It is meant to give you a quick taste of Spring Boot. If you want to create your own Spring Boot-based project, visit
-http://start.spring.io/[Spring Initializr], fill in your project details, pick your options, and you can download either
-a Maven build file, or a bundled up project as a zip file.
+本指南提供了一个示例，演示了 {spring-boot}[Spring Boot] 如何帮助你加速和促进应用开发。当您阅读更多的Spring入门指南时，您会看到更多的Spring Boot用例。它的目的是让你快速尝试Spring Boot。如果你想创建自己的Spring Boot为基础的项目，访问http://start.knos.top/[Spring Initializr]，方括号中填写您的项目的详细信息，选择你的选项，你可以下载Maven构建文件，或将项目打包为一个zip文件。
 
 == 你将构建什么
-You'll build a simple web application with Spring Boot and add some useful services to it.
+您将使用Spring Boot构建一个简单的Web应用程序，并向它添加一些有用的服务。
 
 == 你需要什么
 
@@ -32,20 +29,20 @@ include::https://raw.githubusercontent.com/webGoBetter/getting-started-macros/ma
 
 == 了解用Spring Boot你可以做什么
 
-Spring Boot offers a fast way to build applications. It looks at your classpath and at beans you have configured, makes reasonable assumptions about what you're missing, and adds it. With Spring Boot you can focus more on business features and less on infrastructure.
+Spring Boot提供了一种快速构建应用程序的方法。在你的classpath和你已经配置了Beans中寻找，对你省略的设置做出合理的假设，然后添加进去。使用Spring Boot，您可以更多地关注业务特性，而较少关注基础设施。
 
-For example:
+举个例子:
 
-- Got Spring MVC? There are several specific beans you almost always need, and Spring Boot adds them automatically. A Spring MVC app also needs a servlet container, so Spring Boot automatically configures embedded Tomcat.
-- Got Jetty? If so, you probably do NOT want Tomcat, but instead embedded Jetty. Spring Boot handles that for you.
-- Got Thymeleaf? There are a few beans that must always be added to your application context; Spring Boot adds them for you.
+- 有Spring MVC吗？有几个特定的bean，你几乎总是需要，所以Spring Boot自动添加它们。Spring MVC应用程序还需要一个servlet容器，因此Spring Boot会自动配置一个嵌入式Tomcat。
+- 有Jetty吗？如果是这样，你可能不希望Tomcat，而是嵌入Jetty。Spring Boot为您处理。
+- 有Thymeleaf吗？有几个bean必须始终添加到应用程序上下文中；Spring Boot会将它们添加到您的应用程序中。
 
-These are just a few examples of the automatic configuration Spring Boot provides. At the same time, Spring Boot doesn't get in your way. For example, if Thymeleaf is on your path, Spring Boot adds a `SpringTemplateEngine` to your application context automatically. But if you define your own `SpringTemplateEngine` with your own settings, then Spring Boot won't add one. This leaves you in control with little effort on your part.
+这些只是Spring Boot提供的自动配置的几个例子。同时，Spring Boot不会妨碍你的工作。例如，如果Thymeleaf在你的类路径上，Spring Boot会自动添加一个  `SpringTemplateEngine` 到你的应用程序的上下文中。但是如果你在你自己的设置里定义了你自己的 `SpringTemplateEngine` ，那么Spring Boot就不会添加它了。只需要一点点工作就可以让你控制这一切。
 
-NOTE: Spring Boot doesn't generate code or make edits to your files. Instead, when you start up your application, Spring Boot dynamically wires up beans and settings and applies them to your application context.
+NOTE: Spring Boot 不生成代码或对文件进行编辑。相反，当启动应用程序时，Spring Boot 动态地将bean和设置连接起来，并将它们应用到应用程序上下文中。
 
 == 创建一个简单的Web应用程序
-Now you can create a web controller for a simple web application.
+现在您可以为一个简单的Web应用程序创建一个Web控制器。
 
 `src/main/java/hello/HelloController.java`
 [source,java]
@@ -53,7 +50,7 @@ Now you can create a web controller for a simple web application.
 include::initial/src/main/java/hello/HelloController.java[]
 ----
 
-The class is flagged as a `@RestController`, meaning it's ready for use by Spring MVC to handle web requests. `@RequestMapping` maps `/` to the `index()` method. When invoked from a browser or using curl on the command line, the method returns pure text. That's because `@RestController` combines `@Controller` and `@ResponseBody`, two annotations that results in web requests returning data rather than a view.
+这个类被标记为一个 `@RestController` ，意思是准备使用Spring MVC处理Web请求。 `@RequestMapping` 映射 `/` 到 `index()` 方法。当从浏览器调用或使用命令行上的 curl 时，该方法返回纯文本。这是因为 `@RestController` 结合 `@Controller` 和 `@ResponseBody` ，这两个注释会是在Web请求返回的结果是数据而不是一个视图。
 
 == 创建应用程序类
 Here you create an `Application` class with the components:
