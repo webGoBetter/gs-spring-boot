@@ -290,7 +290,7 @@ Spring Boot是通过动态地为你的代码添加关键注释,然后使用使�
 祝贺你!使用Spring Boot构建了一个简单的Web应用程序，并学习了如何提高开发速度。您还打开了一些便利的生产服务。
 这只是一个关于Spring Boot可以做什么小示例。如果你想了解得更深入点，访问 http://docs.spring.io/spring-boot/docs/{spring_boot_version}/reference/htmlsingle[Spring Boot在线文档]。
 
-== 参见
+== 参考
 
 以下指南也可能有用:
 
